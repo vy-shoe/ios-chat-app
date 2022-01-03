@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="60" id="ph1-wX-D3a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
-                                <color key="textColor" systemColor="systemTealColor"/>
+                                <color key="textColor" name="BrandBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -291,7 +291,7 @@
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="643.52678571428567"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--🌻SunChatz-->
         <scene sceneID="yeH-Ia-3JZ">
             <objects>
                 <viewController id="lwd-AH-u8E" customClass="ChatViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
@@ -354,7 +354,7 @@
                             <constraint firstItem="S6L-hg-cne" firstAttribute="top" secondItem="6YX-ca-E8f" secondAttribute="top" id="sQt-L5-8LV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q5u-eL-Bgp">
+                    <navigationItem key="navigationItem" title="🌻SunChatz" id="Q5u-eL-Bgp">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="cTR-nY-V29">
                             <connections>
                                 <action selector="logoutPressed:" destination="lwd-AH-u8E" id="Shw-PK-zgl"/>
@@ -383,6 +383,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XPV-eH-z0R">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="BrandLightBlue"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
+                            <color key="textColor" name="BrandBrown"/>
+                            <color key="textShadowColor" name="BrandBrown"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -397,11 +405,18 @@
     <inferredMetricsTieBreakers>
         <segue reference="S19-qv-DL6"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="BrandTeal"/>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="textfield" width="298" height="93"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandBrown">
+            <color red="0.3134864267676768" green="0.25090616312364922" blue="0.054864187881358328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -414,6 +429,9 @@
         </namedColor>
         <namedColor name="BrandPurple">
             <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandTeal">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandYellow">
             <color red="0.9869999885559082" green="0.79000002145767212" blue="0.16300000250339508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

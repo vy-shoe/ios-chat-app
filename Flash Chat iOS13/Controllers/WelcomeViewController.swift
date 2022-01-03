@@ -14,6 +14,19 @@ class WelcomeViewController: UIViewController {
 //    @IBOutlet weak var titleLabel: CLTypingLabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    //Disable Navigation Bar for welcome screen before loading
+    //Always call super when overriding function from super class
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    //Enable Navigation Bar after segue
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        titleLabel.text = K.appName
