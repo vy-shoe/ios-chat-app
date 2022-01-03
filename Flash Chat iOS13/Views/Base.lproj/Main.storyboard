@@ -95,8 +95,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-xD-C7r">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u72-XV-6FN">
-                                        <rect key="frame" x="48" y="50" width="318" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u72-XV-6FN">
+                                        <rect key="frame" x="48" y="49" width="318" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -130,7 +130,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="jY9-l3-E1g">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-P9-NkF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-P9-NkF">
                                         <rect key="frame" x="49" y="50" width="317" height="45"/>
                                         <color key="textColor" systemColor="systemTealColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -380,15 +380,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fBD-15-EiL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XPV-eH-z0R">
+                    <navigationBar key="navigationBar" autoresizesSubviews="NO" contentMode="scaleToFill" id="XPV-eH-z0R">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="BrandLightBlue"/>
+                        <color key="tintColor" name="BrandBrown"/>
                         <color key="barTintColor" name="AccentColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
                             <color key="textColor" name="BrandBrown"/>
-                            <color key="textShadowColor" name="BrandBrown"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
