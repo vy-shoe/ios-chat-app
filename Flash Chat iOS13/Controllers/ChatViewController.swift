@@ -52,13 +52,14 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async { //ensures that the fetching of documents happens in the main thread and updates data
                                 self.tableView.reloadData() //trigger those data source methods to load messages
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0) //get last item of messages array, no sections for this object
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                             
                         }
                     }
                 }
             }
-            
         }
     }
     
@@ -74,7 +75,10 @@ class ChatViewController: UIViewController {
                     print("There was an issue saving data to firestore, \(e)")
                 } else {
                     print("Successfully saved data.")
-                    self.messageTextfield.text = ""
+                    //rather putting it in a background thread (where enclosures tend to take place, put it in async dispatch for immediate main thread
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
                 }
             }
         }
@@ -95,13 +99,31 @@ class ChatViewController: UIViewController {
 }
 
 extension ChatViewController: UITableViewDataSource {
+    //create the number of cells that match the number of messages
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label.text = messages[indexPath.row].body //get message of the row index
+        cell.label.text = message.body //get message of the row index
+        
+        //This is a message fromt he current user.
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightYellow)
+            cell.label.textColor = UIColor(named: K.BrandColors.brown)
+        }
+        //This is a message from another sender
+        else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.teal)
+            cell.label.textColor = UIColor(named: K.BrandColors.lightBlue)
+        }
+        
         return cell
     }
 }
